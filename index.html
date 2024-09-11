@@ -102,12 +102,16 @@
         slidesPerView: 1,
         spaceBetween: 10,
         loop: true,
+        autoplay: {
+            delay: 3000, // Change slide every 3 seconds
+            disableOnInteraction: false, // Keep autoplay active even when user interacts with Swiper
+        },
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
         },
     });
-    </script>
+</script>
 
 </body>
 </html>
