@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/styles/style.css">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
 
 </head>
@@ -34,15 +34,15 @@
                 <div class="swiper-wrapper">
                     <!-- Slide 1 -->
                     <div class="swiper-slide">
-                        <img src="assets/images/image1.PNG" alt="Image 1" style="width: 20%; height: auto;">
+                        <img src="assets/images/image1.PNG" alt="Image 1" >
                     </div>
                     <!-- Slide 2 -->
                     <div class="swiper-slide">
-                        <img src="assets/images/image2.PNG" alt="Image 2" style="width: 20%; height: auto;">
+                        <img src="assets/images/image2.PNG" alt="Image 2">
                     </div>
                     <!-- Slide 3 -->
                     <div class="swiper-slide">
-                        <img src="assets/images/image3.PNG" alt="Image 3" style="width: 20%; height: auto;">
+                        <img src="assets/images/image3.PNG" alt="Image 3" >
                     </div>
                 </div>
                 <!-- Add Pagination -->
@@ -78,18 +78,20 @@
 
     <script>
     var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 1,
-        centeredSlides: true, // Center the slide
-        loop: true,
-        autoplay: {
-            delay: 3000, // Change slide every 3 seconds
-            disableOnInteraction: false,
-        },
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-    });
+    slidesPerView: 'auto', // Adjust to fit the screen size
+    spaceBetween: 10, // Space between slides
+    centeredSlides: true,
+    loop: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+});
+
 
 </script>
 
