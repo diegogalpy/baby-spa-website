@@ -114,12 +114,10 @@ header img {
     display: block;
     margin: 0 auto;
     padding: 20px 0;
-}
-
-/* Ensure the Swiper container is responsive */
+}/* General Swiper container styles */
 .swiper-container {
     width: 100%;
-    height: auto; /* Height will adjust based on content */
+    height: auto;
 }
 
 /* Style for Swiper slides */
@@ -131,7 +129,36 @@ header img {
 
 /* Style for images inside Swiper slides */
 .swiper-slide img {
-    max-width: 100%;   /* Ensure image doesn't overflow horizontally */
-    height: auto;      /* Maintain aspect ratio */
-    display: block;    /* Remove any unwanted space below the image */
+    max-width: 100%;  /* Ensure image doesn't overflow horizontally */
+    height: auto;     /* Maintain aspect ratio */
+    display: block;   /* Remove any unwanted space below the image */
+}
+
+/* Adjust image size for small screens */
+@media (max-width: 768px) {
+    .swiper-slide img {
+        width: 80%;  /* Adjust the width to make images larger on smaller screens */
+        max-width: 100%; /* Ensure it doesn't exceed the container width */
+    }
+}
+
+/* Adjust image size for very small screens */
+@media (max-width: 480px) {
+    .swiper-slide img {
+        width: 100%; /* Full width for very small screens */
+    }
+}
+
+/* Adjust image size for larger screens */
+@media (min-width: 769px) {
+    .swiper-slide img {
+        width: 50%; /* Adjust the width to make images smaller on larger screens */
+        max-width: 100%; /* Ensure it doesn't exceed the container width */
+    }
+}
+
+@media (min-width: 1024px) {
+    .swiper-slide img {
+        width: 40%; /* Further adjust for extra-large screens */
+    }
 }
