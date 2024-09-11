@@ -12,26 +12,27 @@
 
      <style>
         /* Style for the Swiper container to ensure pagination is below the image */
-        .swiper-container {
-            position: relative;
-            width: 100%;
-            height: auto; /* Let the height adjust automatically to the content */
-        }
+.swiper-container {
+    position: relative;
+    width: 100%;
+    height: auto; /* Let the height adjust automatically to the content */
+}
 
-        /* Position the pagination bullets below the slider */
-        .swiper-pagination {
-            position: relative;
-            bottom: -10px; /* Moves the bullets further below */
-            text-align: center;
-            margin-top: 10px;
-        }
+/* Position the pagination bullets below the slider */
+.swiper-pagination {
+    position: absolute; /* Change to absolute if you want it to be positioned relative to the container */
+    bottom: 0; /* Move it to the bottom of the container */
+    text-align: center;
+    width: 100%; /* Make sure it spans the width of the container */
+}
 
-        /* Ensure the images are properly sized and not stretched */
-        .swiper-slide img {
-            width: 100%;
-            height: auto; /* Ensures the images scale properly */
-            display: block;
-        }
+/* Ensure the images are properly sized and not stretched */
+.swiper-slide img {
+    width: 100%;
+    height: auto; /* Ensures the images scale properly */
+    display: block;
+}
+
     </style>
 </head>
 <body>
