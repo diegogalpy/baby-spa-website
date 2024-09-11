@@ -11,27 +11,29 @@
     
 
      <style>
-        /* Style for the Swiper container to ensure pagination is below the image */
-        .swiper-container {
-            position: relative;
-            width: 100%;
-            height: auto; /* Let the height adjust automatically to the content */
-        }
+        /* Style for the Swiper container */
+.swiper-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
 
-        /* Position the pagination bullets below the slider */
-        .swiper-pagination {
-            position: relative;
-            bottom: -10px; /* Moves the bullets further below */
-            text-align: center;
-            margin-top: 10px;
-        }
+/* Style for the Swiper wrapper */
+.swiper-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-        /* Ensure the images are properly sized and not stretched */
-        .swiper-slide img {
-            width: 100%;
-            height: auto; /* Ensures the images scale properly */
-            display: block;
-        }
+/* Ensure the images are centered and fit properly */
+.swiper-slide img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+}
     </style>
 </head>
 <body>
@@ -102,17 +104,18 @@
     <script>
     var swiper = new Swiper('.swiper-container', {
         slidesPerView: 1,
-        spaceBetween: 10,
+        centeredSlides: true, // Center the slide
         loop: true,
         autoplay: {
             delay: 3000, // Change slide every 3 seconds
-            disableOnInteraction: false, // Keep autoplay active even when user interacts with Swiper
+            disableOnInteraction: false,
         },
         pagination: {
             el: '.swiper-pagination',
             clickable: true,
         },
     });
+
 </script>
 
 </body>
