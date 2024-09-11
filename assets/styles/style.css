@@ -115,3 +115,23 @@ header img {
     margin: 0 auto;
     padding: 20px 0;
 }
+
+/* Ensure the Swiper container is responsive */
+.swiper-container {
+    width: 100%;
+    height: auto; /* Height will adjust based on content */
+}
+
+/* Style for Swiper slides */
+.swiper-slide {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+}
+
+/* Style for images inside Swiper slides */
+.swiper-slide img {
+    max-width: 100%;   /* Ensure image doesn't overflow horizontally */
+    height: auto;      /* Maintain aspect ratio */
+    display: block;    /* Remove any unwanted space below the image */
+}
