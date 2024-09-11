@@ -115,18 +115,3 @@ header img {
     margin: 0 auto;
     padding: 20px 0;
 }
-
-/* Style for the Swiper container to ensure pagination is below the image */
-.swiper-container {
-    position: relative;
-    width: 100%;
-    height: auto; /* Let the height adjust automatically to the content */
-}
-
-/* Position the pagination bullets below the slider */
-.swiper-pagination {
-    position: relative;
-    bottom: -10px; /* Moves the bullets further below */
-    text-align: center;
-    margin-top: 10px;
-}
