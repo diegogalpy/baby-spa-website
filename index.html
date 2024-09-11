@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oh GG! Baby Spa</title>
     <link rel="stylesheet" href="assets/styles/style.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </head>
 <body>
     <!-- Header with Navigation -->
@@ -22,6 +27,29 @@
 
     <!-- Main Content Section -->
     <main>
+        <section id="image-slider">
+            <h2>Recent Highlights</h2>
+            <!-- Swiper container -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Slide 1 -->
+                    <div class="swiper-slide">
+                        <img src="assets/images/image1.png" alt="Image 1" style="width: 100%; height: auto;">
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="swiper-slide">
+                        <img src="assets/images/image2.png" alt="Image 2" style="width: 100%; height: auto;">
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="swiper-slide">
+                        <img src="assets/images/image3.png" alt="Image 3" style="width: 100%; height: auto;">
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+
         <section id="sessions">
             <h2>Sesiones</h2>
             <ul>
