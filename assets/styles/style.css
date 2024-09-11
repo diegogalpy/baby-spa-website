@@ -1,33 +1,111 @@
+/* Body Styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #e6e0f8; /* Light Purple Background */
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    color: #333;
 }
 
+/* Header Styling */
 header {
-    background-color: #f8f9fa;
-    padding: 10px 0;
+    background-color: #9b59b6; /* Dark Purple Header */
+    padding: 20px;
     text-align: center;
+}
+
+header h1 {
+    color: #fff;
+    font-size: 3em;
+    margin: 0;
+}
+
+nav {
+    margin-top: 15px;
 }
 
 nav a {
-    margin: 0 15px;
+    color: #fff;
     text-decoration: none;
-    color: #5bc0de;
+    margin: 0 15px;
+    font-size: 1.2em;
+    padding: 10px 20px;
+    border: 2px solid #fff;
+    border-radius: 30px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-h1 {
+nav a:hover {
+    background-color: #fff;
     color: #9b59b6;
 }
 
-footer {
-    background-color: #222;
-    color: #fff;
-    padding: 10px 0;
+/* Main Content */
+main {
+    padding: 40px 10%;
     text-align: center;
 }
 
-main {
+/* Session List Styling */
+#sessions ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#sessions ul li {
+    background-color: #fff;
+    border-radius: 10px;
     padding: 20px;
+    margin: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#sessions h2 {
+    color: #9b59b6;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Button Styles */
+button {
+    background-color: #9b59b6;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #8e44ad;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    main {
+        padding: 20px 5%;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
 }
