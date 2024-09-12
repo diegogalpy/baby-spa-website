@@ -254,6 +254,10 @@ animation-iteration-count: infinite;
   color: #777;
 }
 
+html {
+      scroll-behavior: smooth;
+    }
+
 /* Responsive Design */
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -387,4 +391,33 @@ animation-iteration-count: infinite;
     .testimonial-section::-webkit-scrollbar-track {
         background-color: transparent;         /* Track color */
     }
+}
+
+
+/* General Styles */
+.contact-title {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-info {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.contact-info p {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+.contact-info a {
+  color: #1a73e8;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
 }
