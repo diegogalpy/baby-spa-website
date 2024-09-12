@@ -226,6 +226,7 @@ animation-iteration-count: infinite;
 .testimonial-carousel {
   display: flex;
   overflow-x: auto;
+  overflow-y: auto;
   scroll-behavior: smooth;
   padding: 10px 0;
 }
