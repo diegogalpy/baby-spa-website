@@ -5,13 +5,15 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
+    box-sizing: border-box; /* Include padding in all elements */
 }
 
 /* Header Styling */
 .header-container {
-    display: flex;    
+    display: flex;
+    justify-content: space-between;    
     align-items: center; /* Align items vertically */
-    padding: 0px 0px;
+    padding: 10px 5%;
     width: 100%;
     box-sizing: border-box; /* Include padding in the width */
     background-color: #f7f7f7; /* Dark Purple Header */
@@ -21,21 +23,16 @@ body {
 .logo {
     max-width: 150px;
     height: auto;
-    padding: 0px 50px 0px 240px; /* Remove any extra padding */
+   
 }
 
-/* Remove previous conflicting header image styles */
-header img {
-    display: inline-block; /* Prevent stacking on small devices */
-    margin: 0;
-}
 
 /* Style the navigation links */
 nav {
     display: flex;
     gap: 30px;
     margin: 0; /* Remove extra margin */
-    color: #c4ace0;    
+   
    
 }
 
@@ -66,8 +63,8 @@ main {
 
 /* Style for images inside Swiper slides */
 .swiper-slide img {
-    max-width: 35%;  /* Ensure image doesn't overflow horizontally */ 
-    padding: 50px;  
+    max-width: 100%;  /* Ensure image doesn't overflow horizontally */ 
+    padding: 20px;  
 }
 
 
@@ -76,6 +73,7 @@ main {
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center;     /* Center vertically */
+     padding: 10px;
 }
 
 
@@ -106,9 +104,7 @@ footer {
     background-color: #333;
     color: #fff;
     padding: 20px;
-    text-align: center;
-    position: relative;
-    bottom: 0;
+    text-align: center;    
     width: 100%;
 }
 
@@ -133,8 +129,8 @@ button:hover {
 .soapBubble{
 position:relative;
 z-index: 1;
-width: 10vmin;
-height: 10vmin;
+width: 5vmin;
+height: 5vmin;
 outline: 0 solid rgba(0,0,0,.7) ;
 transition:1s;
 }
@@ -145,37 +141,39 @@ height: 100%;
 width: 100%;
 }
 .bubbleImg{
-border-radius: 50%;
-border:3px solid rgba(255,255,255,.5);
-transition: 1s;
-background-image:
-    url("data:image/svg+xml;utf8, <svg width='100' height='100' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='50' r='50' fill='none'/><circle cx='24' cy='24' r='7.5' fill='white' /><path d='M78 58.4999C69.5 72.4999 56 78.4999 53.5 80.9999C51 83.4999 50 89.9999 59.5 87.4999C69 84.9999 82.5 76.4999 86.5 67.4999C90.5 58.5 86.5 44.5 78 58.4999Z' fill='rgba(255,255,255,.9)' style='filter:blur(0px)'/></svg>"),
-    radial-gradient(circle at 70% 96%,white .5%, rgba(255,255,200,.4) 2%, transparent 9%) ,
-    radial-gradient( at 30% 20%,white 1%, rgba(255,255,200,1) 2%, transparent 20%,transparent 50%, rgba(0,200,200,.3) 73%,rgba(0,80,80,.3) 84% ),     
-    radial-gradient(circle at 0% 0%,rgba(255,0,255,.7) 2%,transparent 80%);
-background-size: cover;
+    border-radius: 50%;
+    border:3px solid rgba(255,255,255,.5);
+    transition: 1s;
+    background-image:
+        url("data:image/svg+xml;utf8, <svg width='100' height='100' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='50' r='50' fill='none'/><circle cx='24' cy='24' r='7.5' fill='white' /><path d='M78 58.4999C69.5 72.4999 56 78.4999 53.5 80.9999C51 83.4999 50 89.9999 59.5 87.4999C69 84.9999 82.5 76.4999 86.5 67.4999C90.5 58.5 86.5 44.5 78 58.4999Z' fill='rgba(255,255,255,.9)' style='filter:blur(0px)'/></svg>"),
+        radial-gradient(circle at 70% 96%,white .5%, rgba(255,255,200,.4) 2%, transparent 9%) ,
+        radial-gradient( at 30% 20%,white 1%, rgba(255,255,200,1) 2%, transparent 20%,transparent 50%, rgba(0,200,200,.3) 73%,rgba(0,80,80,.3) 84% ),     
+        radial-gradient(circle at 0% 0%,rgba(255,0,255,.7) 2%,transparent 80%);
+    background-size: cover;
 }
 .moveX{
 animation-name: moveX;
-animation-duration: 2s;
+animation-duration: 10s;
 animation-timing-function: ease-in-out;
 animation-direction: alternate;
 animation-iteration-count: infinite;
 }
 @keyframes moveX{ 
-from{transform: translateX(-2vmin);}
-to{transform: translateX(30vmin);}
+from{transform: translateX(-5vw);}
+to{transform: translateX(5vw);}
 }
-.moveY{
-animation-name: moveY;
-animation-duration: 1.4s;
-animation-timing-function: ease-in-out;
-animation-direction: alternate;
-animation-iteration-count: infinite;
+/* Move vertically adapting to screen size */
+.moveY {
+    animation-name: moveY;
+    animation-duration: 1.4s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
 }
-@keyframes moveY { 
-from{transform: translateY(-2vmin);}
-to{transform: translateY(2vmin);}
+
+@keyframes moveY {
+    from { transform: translateY(-3vh); }  /* Move slightly up */
+    to { transform: translateY(3vh); }     /* Move slightly down */
 }
 .deformX{
 animation-name: deformX;
@@ -256,17 +254,43 @@ animation-iteration-count: infinite;
 }
 
 /* Responsive Design */
+/* Responsive Design */
 @media (max-width: 768px) {
-  .testimonial-carousel {
-    flex-direction: column;
-    align-items: center;
-  }
+    .header-container {
+        flex-direction: column;
+        padding: 10px;
+    }
 
-  .testimonial {
-    width: 80%;
-    margin: 10px 0;
-  }
+    .logo {
+        padding: 0;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    nav a {
+        padding: 10px 15px;
+        font-size: 16px;
+    }
+
+    .swiper-slide img {
+        max-width: 80%;  /* Ensure better scaling on small devices */
+    }
+
+    .testimonial-carousel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .testimonial {
+        width: 90%;
+        margin: 10px 0;
+    }
 }
+
 /* Mission Section */
 .mission {
   background-color: #e0f7fa; /* Light blue background */
@@ -341,3 +365,25 @@ animation-iteration-count: infinite;
   background-color: #d84315; /* Even darker orange when clicked */
 }
 
+/* Apply these styles only on screens smaller than 600px */
+@media only screen and (max-width: 600px) {
+    .testimonial-section {
+        max-height: 400px;  /* Set a fixed height (adjust as needed) */
+        overflow-y: scroll; /* Enable vertical scrolling */
+        padding-right: 10px; /* Optional: add space for scrollbar */
+    }
+
+    /* Optional: Customize scrollbar appearance */
+    .testimonial-section::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    .testimonial-section::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.3);  /* Scrollbar color */
+        border-radius: 5px;                    /* Rounded corners */
+    }
+
+    .testimonial-section::-webkit-scrollbar-track {
+        background-color: transparent;         /* Track color */
+    }
+}
