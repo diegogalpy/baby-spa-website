@@ -13,18 +13,31 @@
 </head>
 <body>
     <!-- Header with Navigation -->
-    <header>
-        <!-- Replace the title with the logo image -->
-        <img src="assets/images/logo final.png" alt="Oh GG! Baby Spa Logo" style="max-width: 300px; height: auto;">
+    <header class="header-container">
+            <div class="soapBubble">
+                <div class="moveX">
+                    <div class="moveY">
+                        <div class="deformX">  
+                            <div class="deformY">
+                                <div class ="bubbleImg"></div>
+                            </div>  
+                        </div>  
+                    </div>
+                </div>
+           </div>
+
+        <!-- Logo -->
+        <img src="assets/images/logo.jpg" alt="Oh GG! Baby Spa Logo" class="logo" >
         
+        <!-- Navigation -->
         <nav>
             <a href="about.html">Servicios</a>
-            <a href="gallery.html">Galeria</a>
+            <a href="gallery.html">Galería</a>
             <a href="testimonials.html">Testimonios</a>
             <a href="contact.html">Contacto</a>
         </nav>
-    </header>
-
+   
+   </header>
     <!-- Main Content Section -->
     <main>
         <section id="image-slider">
@@ -50,14 +63,49 @@
             </div>
         </section>
 
-        <section id="sessions">
-            <h2>Sesiones</h2>
-            <ul>
-                <li><strong>Sesion Post-Vacuna:</strong> Hidroterapia + Masaje + Hidratación</li>
-                <li><strong>Massage Therapy:</strong> $40 per session</li>
-                <li><strong>Combo (Hydro + Massage):</strong> $80 per session</li>
-            </ul>
-        </section>
+        <section class="mission">
+        <div class="container">
+            <h2>Nuestra Misión</h2>
+            <p>
+                En Oh! GG Baby Spa, nuestra misión es proporcionar un ambiente relajante y estimulante para los bebés, promoviendo su desarrollo físico y emocional a través de terapias acuáticas y masajes especializados. Nos comprometemos a ofrecer una experiencia única para fortalecer el vínculo entre padres e hijos mientras cuidamos el bienestar integral de cada bebé.
+            </p>
+        </div>
+      </section>
+
+        <section class="testimonials">
+        <div class="container">
+            <h2>Lo que Dicen Nuestros Clientes</h2>
+            <div class="testimonial-carousel">
+                <div class="testimonial">
+                    <p>"Excelente atención súper atentos y amorosos con lo bebes ❤️"</p>
+                    <cite>— Celeste López</cite>
+                </div>
+                <div class="testimonial">
+                    <p>"El mejor lugar para mimarle a nuestros peques   💖👶❣️"</p>
+                    <cite>— Beatriz Almiron</cite>
+                </div>
+                
+                <div class="testimonial">
+                    <p>"Excelente servicio! Totalmente conforme con todo el procedimineto de la Licenciada"</p>
+                    <cite>— Marisa Acosta</cite>
+                </div>
+                <div class="testimonial">
+                    <p>"Recomiendo este lugar para un momento de conexión de amor con tu bebé"</p>
+                    <cite>— Raquel Santander</cite>
+                </div>
+                <div class="testimonial">
+                    <p>"Atención muy amable, súper empática."</p>
+                    <cite>— Alma González</cite>
+                </div>
+                <!-- Add more testimonials as needed -->
+                
+                <div class="testimonial">
+                    <p>"Muy buen servicio y las profesionales son excelentes! A mi bebé le encantó."</p>
+                    <cite>— Angeles Sallaberry </cite>
+                </div>
+            </div>
+        </div>
+    </section>
 
         <section id="booking">
             <h2>Reservaciones</h2>
@@ -78,32 +126,32 @@
 
     <script>
        var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 1, // Adjust to fit the screen size
-    spaceBetween: 10, // Space between slides
-    centeredSlides: true,
-    loop: true,
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-    },
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-    },
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-            spaceBetween: 10,
+        slidesPerView: 1, // Adjust to fit the screen size
+        spaceBetween: 10, // Space between slides
+        centeredSlides: true,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
         },
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 20,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
         },
-        1024: {
-            slidesPerView: 3,
-            spaceBetween: 30,
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+            },
+            768: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+            },
+            1024: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+            },
         },
-    },
 });
 
 

@@ -1,70 +1,105 @@
-/* Body Styling */
+/* General Styling */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #e6e0f8; /* Light Purple Background */
+    background-color: #c4ace0; /* Light Purple Background */
     margin: 0;
     padding: 0;
     color: #333;
 }
 
 /* Header Styling */
-header {
-    background-color: #9b59b6; /* Dark Purple Header */
-    padding: 20px;
-    text-align: center;
+.header-container {
+    display: flex;    
+    align-items: center; /* Align items vertically */
+    padding: 0px 0px;
+    width: 100%;
+    box-sizing: border-box; /* Include padding in the width */
+    background-color: #f7f7f7; /* Dark Purple Header */
 }
 
-header h1 {
-    color: #fff;
-    font-size: 3em;
+/* Style for the logo */
+.logo {
+    max-width: 150px;
+    height: auto;
+    padding: 0px 50px 0px 240px; /* Remove any extra padding */
+}
+
+/* Remove previous conflicting header image styles */
+header img {
+    display: inline-block; /* Prevent stacking on small devices */
     margin: 0;
 }
 
+/* Style the navigation links */
 nav {
-    margin-top: 15px;
+    display: flex;
+    gap: 30px;
+    margin: 0; /* Remove extra margin */
+    color: #c4ace0;    
+   
 }
 
 nav a {
-    color: #fff;
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.2em;
+    font-size: 18px;
+    color: #f7f7f7;
+    font-weight: bold;
     padding: 10px 20px;
-    border: 2px solid #fff;
+    border: #c4ace0;
     border-radius: 30px;
+    background-color: #c4ace0;
     transition: background-color 0.3s, color 0.3s;
 }
 
 nav a:hover {
-    background-color: #fff;
-    color: #9b59b6;
+    background-color: #9fdbdb;
+    color: #f7f7f7;
 }
 
+
+/* Style the SWIPER-CONTAINER */
 /* Main Content */
 main {
-    padding: 40px 10%;
+    padding: 20px 10%;
     text-align: center;
 }
+
+/* Style for images inside Swiper slides */
+.swiper-slide img {
+    max-width: 35%;  /* Ensure image doesn't overflow horizontally */ 
+    padding: 50px;  
+}
+
+
+/* Style for Swiper slides */
+.swiper-slide {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+}
+
 
 /* Session List Styling */
 #sessions ul {
     list-style-type: none;
-    padding: 0;
+    padding: 0px;
 }
 
 #sessions ul li {
-    background-color: #fff;
+    background-color: #f7f7f7;
+    color = #f7f7f7;
     border-radius: 10px;
     padding: 20px;
-    margin: 10px 0;
+    margin: 20px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #sessions h2 {
     color: #9b59b6;
     font-size: 2.5em;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
 }
+
 
 /* Footer Styling */
 footer {
@@ -93,72 +128,216 @@ button:hover {
     background-color: #8e44ad;
 }
 
-/* Media Queries for Responsive Design */
+/* BUBLE*/
+
+.soapBubble{
+position:relative;
+z-index: 1;
+width: 10vmin;
+height: 10vmin;
+outline: 0 solid rgba(0,0,0,.7) ;
+transition:1s;
+}
+
+.soapBubble div{
+position:absolute;
+height: 100%;
+width: 100%;
+}
+.bubbleImg{
+border-radius: 50%;
+border:3px solid rgba(255,255,255,.5);
+transition: 1s;
+background-image:
+    url("data:image/svg+xml;utf8, <svg width='100' height='100' xmlns='http://www.w3.org/2000/svg'><circle cx='50' cy='50' r='50' fill='none'/><circle cx='24' cy='24' r='7.5' fill='white' /><path d='M78 58.4999C69.5 72.4999 56 78.4999 53.5 80.9999C51 83.4999 50 89.9999 59.5 87.4999C69 84.9999 82.5 76.4999 86.5 67.4999C90.5 58.5 86.5 44.5 78 58.4999Z' fill='rgba(255,255,255,.9)' style='filter:blur(0px)'/></svg>"),
+    radial-gradient(circle at 70% 96%,white .5%, rgba(255,255,200,.4) 2%, transparent 9%) ,
+    radial-gradient( at 30% 20%,white 1%, rgba(255,255,200,1) 2%, transparent 20%,transparent 50%, rgba(0,200,200,.3) 73%,rgba(0,80,80,.3) 84% ),     
+    radial-gradient(circle at 0% 0%,rgba(255,0,255,.7) 2%,transparent 80%);
+background-size: cover;
+}
+.moveX{
+animation-name: moveX;
+animation-duration: 2s;
+animation-timing-function: ease-in-out;
+animation-direction: alternate;
+animation-iteration-count: infinite;
+}
+@keyframes moveX{ 
+from{transform: translateX(-2vmin);}
+to{transform: translateX(30vmin);}
+}
+.moveY{
+animation-name: moveY;
+animation-duration: 1.4s;
+animation-timing-function: ease-in-out;
+animation-direction: alternate;
+animation-iteration-count: infinite;
+}
+@keyframes moveY { 
+from{transform: translateY(-2vmin);}
+to{transform: translateY(2vmin);}
+}
+.deformX{
+animation-name: deformX;
+animation-duration: 4s;
+animation-timing-function: ease-in-out;
+animation-direction: alternate;
+animation-iteration-count: infinite;
+}
+@keyframes deformX { 
+0%{transform: none;}
+25%{transform:scaleX(1.05) skewX(2deg)}
+50%{transform:none}
+75%{transform:scaleX(1.05)  skewX(-2deg)}
+100%{transform: none;}
+}
+.deformY{
+animation-name: deformY;
+animation-duration: 5s;
+animation-timing-function: ease-in-out;
+animation-direction: alternate;
+animation-iteration-count: infinite;
+}
+@keyframes deformY { 
+0%{transform: none;}
+25%{transform:scaleY(1.05) skewY(2deg)}
+50%{transform:none}
+75%{transform:scaleY(1.05)  skewY(-2deg)}
+100%{transform: none;}
+}  
+
+
+/* Testimonials Section */
+.testimonials {
+  background: #f9f9f9;
+  padding: 50px 0;
+}
+
+.testimonials .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.testimonials h2 {
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.testimonial-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+}
+
+.testimonial {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 0 10px;
+  flex: 0 0 auto;
+  width: 300px;
+  text-align: center;
+}
+
+.testimonial p {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.testimonial cite {
+  display: block;
+  font-style: normal;
+  color: #777;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
-    nav a {
-        display: block;
-        margin: 10px 0;
-        padding: 10px;
-    }
+  .testimonial-carousel {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    main {
-        padding: 20px 5%;
-    }
-
-    header h1 {
-        font-size: 2.5em;
-    }
+  .testimonial {
+    width: 80%;
+    margin: 10px 0;
+  }
+}
+/* Mission Section */
+.mission {
+  background-color: #e0f7fa; /* Light blue background */
+  padding: 50px 50px;
+  text-align: center;
+ margin-bottom: 50px; /* Adds space below the mission section */
 }
 
-header img {
-    display: block;
-    margin: 0 auto;
-    padding: 20px 0;
-}/* General Swiper container styles */
-.swiper-container {
-    width: 100%;
-    height: auto;
+.mission .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* Style for Swiper slides */
-.swiper-slide {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center;     /* Center vertically */
+.mission h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #00796b; /* Darker teal color */
 }
 
-/* Style for images inside Swiper slides */
-.swiper-slide img {
-    max-width: 100%;  /* Ensure image doesn't overflow horizontally */
-    height: auto;     /* Maintain aspect ratio */
-    display: block;   /* Remove any unwanted space below the image */
+.mission p {
+  font-size: 1.2em;
+  color: #333;
+  line-height: 1.6;
+  font-style: italic; /* Cursive font */
 }
 
-/* Adjust image size for small screens */
-@media (max-width: 768px) {
-    .swiper-slide img {
-        width: 80%;  /* Adjust the width to make images larger on smaller screens */
-        max-width: 100%; /* Ensure it doesn't exceed the container width */
-    }
+
+/* Booking Section */
+#booking {
+  background-color: #fff3e0; /* Light orange background */
+  padding: 50px 0;
+  text-align: center;
+  margin-top: 50px; /* Adds space below the mission section */
 }
 
-/* Adjust image size for very small screens */
-@media (max-width: 480px) {
-    .swiper-slide img {
-        width: 100%; /* Full width for very small screens */
-    }
+#booking .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-/* Adjust image size for larger screens */
-@media (min-width: 769px) {
-    .swiper-slide img {
-        width: 50%; /* Adjust the width to make images smaller on larger screens */
-        max-width: 100%; /* Ensure it doesn't exceed the container width */
-    }
+#booking h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #ff7043; /* Orange color for the heading */
 }
 
-@media (min-width: 1024px) {
-    .swiper-slide img {
-        width: 40%; /* Further adjust for extra-large screens */
-    }
+#booking p {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 20px;
 }
+
+.booking-btn {
+  background-color: #ff7043; /* Orange background for the button */
+  color: white;
+  font-size: 1.2em;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.booking-btn:hover {
+  background-color: #e64a19; /* Darker orange on hover */
+}
+
+.booking-btn:active {
+  background-color: #d84315; /* Even darker orange when clicked */
+}
+
