@@ -8,7 +8,8 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
 </head>
 <body>
@@ -43,9 +44,62 @@
             <p><strong>Celular:</strong> 0982-357-778</p>
             <p><strong>Dirección:</strong> Hernandarias, Luque, Paraguay.</p>
             <div class="map-container">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1636.8738305916993!2d-57.472517313853416!3d-25.266535591556714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945daf540df16ee1%3A0xa7200b82f7fd6b07!2sOh*21%20Baby%20Spa!5e1!3m2!1sen!2spy!4v1726167854498!5m2!1sen!2spy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1636.8738305916993!2d-57.472517313853416!3d-25.266535591556714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x945daf540df16ee1%3A0xa7200b82f7fd6b07!2sOh*21%20Baby%20Spa!5e1!3m2!1sen!2spy!4v1726167854498!5m2!1sen!2spy" width="500" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
         </section>
+        <section id="contact">
+    <h3>Siguenos en las Redes Sociales!</h3>    
+    <div class="social-links">
+        <a href="https://www.instagram.com/oh.babyspa" target="_blank" class="social-icon">
+            <i class="fab fa-instagram"></i>
+            <span>Instagram</span>
+        </a>
+        <a href="https://www.tiktok.com/@ohbabyspa" target="_blank" class="social-icon">
+            <i class="fab fa-tiktok"></i>
+            <span>TikTok</span>
+        </a>
+    </div>
+</section>
+
+        <!-- Employee Login Section -->
+    <!--  
+    <section id="employee-login">
+        <h2>Employee Login</h2>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="button" onclick="login()">Login</button>
+        </form>
+    </section>
+
+ 
+<section id="patient-info" style="display:none;">
+    <h2>Load Patient Information</h2>
+  
+    <iframe src="https://docs.google.com/spreadsheets/d/1RTKJLldWHKUTqaSrYYUnIh-hgeYLuVZvOaKgr0dc1WY/edit?usp=sharing" width="100%" height="600" frameborder="0"></iframe>
+</section>
+
+<script>
+    const validUsername = 'CEO'; // Replace with your actual username
+    const validPassword = '2024'; // Replace with your actual password
+
+    function login() {
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        if (username === validUsername && password === validPassword) {
+            document.getElementById('employee-login').style.display = 'none';
+            document.getElementById('patient-info').style.display = 'block';
+        } else {
+            alert('Invalid username or password.');
+        }
+
+        return false; // Prevent form submission
+    }
+</script>
+-->
     </main>
     
     <footer>
