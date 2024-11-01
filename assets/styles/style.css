@@ -72,7 +72,7 @@ main {
 
 /* Style for images inside Swiper slides */
 .swiper-slide img {
-    max-width: 100%;  /* Ensure image doesn't overflow horizontally */ 
+    width: 50%;  /* Ensure image doesn't overflow horizontally */ 
     padding: 20px;  
 }
 
