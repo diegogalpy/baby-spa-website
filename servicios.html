@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="assets/styles/style.css">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+   
      <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -101,22 +100,28 @@
     height: auto;
   }
 
-  /* For larger screens, make the text and image appear side by side */
-  @media(min-width: 768px) {
+  @media (max-width: 767px) {
     .service-content {
-      flex-direction: row;
-      justify-content: space-between;
+        flex-direction: column;
+    }
+    .service {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .service-name, .service-price {
+        font-size: 16px; /* Smaller font for mobile */
+    }
+}
+
+    .service-content .image img {
+        max-width: 100%;
+        height: auto;
+    }
+    body {
+        overflow-x: hidden; /* Prevent horizontal scrolling */
     }
 
-    .text {
-      flex: 1;
-      margin-right: 20px;
-    }
 
-    .image {
-      flex: 1;
-    }
-  }
 
     </style>
 </head>
@@ -340,14 +345,9 @@
 <script>
     // Function to check if the element is in the viewport
     function isInViewport(element) {
-        const rect = element.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
+    const rect = element.getBoundingClientRect();
+    return rect.top < window.innerHeight && rect.bottom >= 0;
+}
 
     // Add the 'in-view' class to sections when they come into view
     function onScroll() {
